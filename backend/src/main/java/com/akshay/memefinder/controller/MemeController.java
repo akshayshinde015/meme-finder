@@ -11,10 +11,13 @@ import java.util.List;
 @RestController
 
 // Allows requests coming from our React development server
-@CrossOrigin(origins = "http://localhost:5173")
 
 // Base URL for all meme endpoints
 @RequestMapping("/api/memes")
+@CrossOrigin(origins = {
+    "http://localhost:5173",
+    "https://meme-finder-frontend.onrender.com"
+})
 public class MemeController {
 
     private final MemeService memeService;
