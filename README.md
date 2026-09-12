@@ -193,4 +193,26 @@ This project helped me practice:
 
 ## Deployment
 
-Deployment details and the live application URL will be added after deployment.
+The application is deployed on Render.
+
+Frontend: React application deployed as a Render Static Site
+
+Backend: Spring Boot application deployed as a Dockerized Render Web Service
+
+API Configuration: Vite environment variables are used to configure the production backend URL
+
+CORS: Configured to allow communication between the deployed React frontend and Spring Boot backend
+
+Note: The backend is hosted on Render's free instance. The first request after a period of inactivity may take some time while the backend service starts.
+## Live Demo
+
+**Frontend:**  
+https://meme-finder-frontend.onrender.com
+
+**Backend API:**  
+https://meme-finder-r3d9.onrender.com
+
+**Example API Request:**
+```text
+https://meme-finder-r3d9.onrender.com/api/memes/search?query=java
+'''
