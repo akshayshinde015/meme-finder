@@ -1,5 +1,7 @@
 import { useState } from "react";
 import "./App.css";
+const API_BASE_URL =
+  import.meta.env.VITE_API_BASE_URL || "http://localhost:8080";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -23,9 +25,9 @@ function App() {
     try {
       const encodedSearch = encodeURIComponent(trimmedSearch);
 
-      const response = await fetch(
-        `http://localhost:8080/api/memes/search?query=${encodedSearch}`
-      );
+const response = await fetch(
+  `${API_BASE_URL}/api/memes/search?query=${encodedSearch}`
+);
 
       if (!response.ok) {
         const errorData = await response.json();
